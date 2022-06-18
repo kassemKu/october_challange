@@ -1,43 +1,55 @@
 {
-  "name": "octobercms",
-  "description": "Free, open-source, self-hosted CMS platform based on the Laravel PHP Framework.",
-  "directories": {
-    "test": "tests/js/cases",
-    "helpers": "tests/js/helpers"
-  },
-  "scripts": {
-    "test": "mocha --require @babel/register tests/js/cases/**/*.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/octobercms/october.git"
-  },
-  "contributors": [
-    {
-      "name": "Alexey Bobkov",
-      "email": "aleksey.bobkov@gmail.com"
+    "name": "octobercms",
+    "description": "Free, open-source, self-hosted CMS platform based on the Laravel PHP Framework.",
+    "directories": {
+        "test": "tests/js/cases",
+        "helpers": "tests/js/helpers"
     },
-    {
-      "name": "Samuel Georges",
-      "email": "daftspunky@gmail.com"
+    "scripts": {
+        "test": "mocha --require @babel/register tests/js/cases/**/*.js",
+        "dev": "npm run development",
+        "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "watch": "npm run development -- --watch",
+        "watch-poll": "npm run watch -- --watch-poll",
+        "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --disable-host-check --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "prod": "npm run production",
+        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --config=node_modules/laravel-mix/setup/webpack.config.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/octobercms/october.git"
+    },
+    "contributors": [
+        {
+            "name": "Alexey Bobkov",
+            "email": "aleksey.bobkov@gmail.com"
+        },
+        {
+            "name": "Samuel Georges",
+            "email": "daftspunky@gmail.com"
+        }
+    ],
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/octobercms/october/issues"
+    },
+    "homepage": "https://octobercms.com/",
+    "devDependencies": {
+        "@babel/cli": "^7.5.5",
+        "@babel/core": "^7.5.5",
+        "@babel/node": "^7.5.5",
+        "@babel/preset-env": "^7.5.5",
+        "@babel/register": "^7.5.5",
+        "babel-plugin-module-resolver": "^3.2.0",
+        "chai": "^4.2.0",
+        "cross-env": "^7.0.3",
+        "jquery": "^3.4.1",
+        "jsdom": "^15.1.1",
+        "laravel-mix": "^6.0.49",
+        "mocha": "^6.2.0",
+        "sinon": "^7.4.1"
+    },
+    "dependencies": {
+        "semantic-ui-css": "^2.4.1"
     }
-  ],
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/octobercms/october/issues"
-  },
-  "homepage": "https://octobercms.com/",
-  "devDependencies": {
-    "@babel/cli": "^7.5.5",
-    "@babel/core": "^7.5.5",
-    "@babel/node": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
-    "@babel/register": "^7.5.5",
-    "babel-plugin-module-resolver": "^3.2.0",
-    "chai": "^4.2.0",
-    "jquery": "^3.4.1",
-    "jsdom": "^15.1.1",
-    "mocha": "^6.2.0",
-    "sinon": "^7.4.1"
-  }
 }
