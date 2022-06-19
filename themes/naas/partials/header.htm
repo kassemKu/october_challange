@@ -1,1 +1,23 @@
-<header class="naa-header-container"></header>
+<header class="naa-header-container">
+    <!-- Start: desktop -->
+    <div class="naa-header__container computer tablet only row">
+        <nav class="naa_header__nav ui inverted menu navbar">
+            <a class="naa_header__nav-logo header item" href="/"
+                >naas project</a
+            >
+            <a class="naa_header__nav-item item {% if this.page.id == 'landingpage' %} active {% endif %}" href="{{ 'landingpage' | page }}">home</a>
+            <a class="naa_header__nav-item item {% if this.page.id == 'protected' %} active {% endif %}" href="{{ 'protected' | page }}">protected by auth</a>
+            <a class="naa_header__nav-item item {% if this.page.id == 'contactus' %} active {% endif %}" href="{{ 'contactus' | page }}">contact us</a>
+            <div class="right menu naa_header__nav__user-actions">
+                {% if user %}
+                    <a class="naa_header__nav-item item" data-request="onLogout" data-request-data="redirect: '/'">Sign out</a>
+                {% else %}
+                    <a class="naa_header__nav-item item {% if this.page.id == 'login' %} active {% endif %}" href="{{ 'login' | page }}"
+                    >login</a
+                    >
+                {% endif %}
+            </div>
+        </nav>
+    </div>
+    <!-- end: desktop -->
+</header>

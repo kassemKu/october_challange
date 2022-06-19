@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>October CMS - {{ this.page.title }}</title>
+        <title>NAAS CHALLENGE - {{ this.page.title }}</title>
         <meta name="description" content="{{ this.page.meta_description }}" />
         <meta name="title" content="{{ this.page.meta_title }}" />
         <meta name="author" content="Naas Theme" />
@@ -11,10 +11,13 @@
         <link rel="stylesheet" href="{{ 'assets/css/app.css'|theme }}" />
     </head>
     <body>
-        { header }
-        <!-- Header -->
-        <main id="layout-content">{% page %}</main>
-        <!-- Footer -->
+        <div class="naa-wrap">
+            <!-- Header -->
+            {% partial 'header' %}
+            <main class="naa-layout-content ui container">{% page %}</main>
+            <!-- Footer -->
+            {% partial 'footer' %}
+        </div>
 
         <!-- Scripts -->
         <script src="{{ 'assets/js/jquery.js'|theme }}"></script>
