@@ -1,33 +1,35 @@
 {{ form_ajax('onSignin') }}
-
-    <div class="form-group">
-        <label for="userSigninLogin">{{ loginAttributeLabel }}</label>
-        <input
-            name="login"
-            type="text"
-            class="form-control"
-            id="userSigninLogin"
-            placeholder="Enter your {{ loginAttributeLabel|lower }}" />
-    </div>
-
-    <div class="form-group">
-        <label for="userSigninPassword">Password</label>
-        <input
-            name="password"
-            type="password"
-            class="form-control"
-            id="userSigninPassword"
-            placeholder="Enter your password" />
-    </div>
-
-    {% if rememberLoginMode == 'ask' %}
-    <div class="form-group">
-        <div class="checkbox">
-        <label><input name="remember" type="checkbox" value="1">Stay logged in</label>
+    <h2 style="text-align: center; text-transform: uppercase;">login</h2>
+    <div class="ui form">
+        <div class="form-group field" style="max-width: 100%;">
+            <label for="userSigninLogin">{{ loginAttributeLabel }}</label>
+            <input
+                name="login"
+                type="text"
+                class="form-control"
+                id="userSigninLogin"
+                placeholder="Enter your {{ loginAttributeLabel|lower }}" />
         </div>
-    </div>
-    {% endif %}
 
-    <button type="submit" class="btn btn-default">Sign in</button>
+        <div class="form-group field" style="max-width: 100%;">
+            <label for="userSigninPassword">Password</label>
+            <input
+                name="password"
+                type="password"
+                class="form-control"
+                id="userSigninPassword"
+                placeholder="Enter your password" />
+        </div>
+
+        {% if rememberLoginMode == 'ask' %}
+        <div class="form-group field">
+            <div class="checkbox">
+            <label><input name="remember" type="checkbox" value="1">Stay logged in</label>
+            </div>
+        </div>
+        {% endif %}
+
+        <button type="submit" class="fluid ui blue button">Sign in</button>
+    </div>
 
 {{ form_close() }}

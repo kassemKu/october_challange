@@ -1,9 +1,8 @@
 {% if canRegister %}
-    <h3>Register</h3>
-
-    {{ form_ajax('onRegister') }}
-
-        <div class="form-group">
+{{ form_ajax('onRegister') }}
+    <h2 style="text-align: center; text-transform: uppercase;">register</h2>
+    <div class="ui form">
+        <div class="form-group field" style="max-width: 100%;">
             <label for="registerName">Full Name</label>
             <input
                 name="name"
@@ -13,7 +12,7 @@
                 placeholder="Enter your full name" />
         </div>
 
-        <div class="form-group">
+        <div class="form-group field" style="max-width: 100%;">
             <label for="registerEmail">Email</label>
             <input
                 name="email"
@@ -24,7 +23,7 @@
         </div>
 
         {% if loginAttribute == "username" %}
-            <div class="form-group">
+            <div class="form-group field" style="max-width: 100%;">
                 <label for="registerUsername">Username</label>
                 <input
                     name="username"
@@ -35,7 +34,7 @@
             </div>
         {% endif %}
 
-        <div class="form-group">
+        <div class="form-group field" style="max-width: 100%;">
             <label for="registerPassword">Password</label>
             <input
                 name="password"
@@ -45,7 +44,8 @@
                 placeholder="Choose a password" />
         </div>
 
-        <button type="submit" class="btn btn-default">Register</button>
+        <button type="submit" class="fluid ui blue button">Register</button>
+    </div>
 
     {{ form_close() }}
 {% else %}

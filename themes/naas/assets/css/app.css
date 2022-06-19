@@ -5,6 +5,10 @@
     flex-direction: column;
     justify-content: space-between;
 }
+.naa-layout-content {
+    margin: 4rem 0;
+}
+
 .naa_header__nav.ui.inverted.menu {
     border: none;
     border-radius: 0;

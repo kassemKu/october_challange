@@ -3,9 +3,10 @@
 </p>
 
 <form
+    class="ui form"
     data-request="{{ __SELF__ }}::onRestorePassword"
     data-request-update="'{{ __SELF__ }}::reset': '#partialUserResetForm'">
-    <div class="form-group">
+    <div class="form-group field">
         <label for="userRestoreEmail">Email</label>
         <input name="email" type="email" class="form-control" id="userRestoreEmail" placeholder="Enter your email">
     </div>

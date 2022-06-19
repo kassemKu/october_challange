@@ -1,5 +1,37 @@
-title = "Login page"
+title = "Login"
 url = "/login"
 layout = "default"
 is_hidden = 0
+
+[account]
+paramCode = "code"
+forceSecure = 0
+requirePassword = 0
 ==
+{% if not user %}
+
+    <div class="ui placeholder segment">
+        <div class="ui two column very relaxed stackable grid">
+
+            <div class="column">
+                {% partial account ~ '::signin' %}
+            </div>
+
+            <div class="column">
+                {% partial account ~ '::register' %}
+            </div>
+        </div>
+        <div class="ui vertical divider">
+            Or
+          </div>
+    </div>
+
+{% else %}
+
+    {% partial account ~ '::activation_check' %}
+
+    {% partial 'user-update' %}
+
+    {% partial account ~ '::deactivate_link' %}
+
+{% endif %}
