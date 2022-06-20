@@ -10,6 +10,7 @@
             <a class="naa_header__nav-item item {% if this.page.id == 'contactus' %} active {% endif %}" href="{{ 'contactus' | page }}">contact us</a>
             <div class="right menu naa_header__nav__user-actions">
                 {% if user %}
+                    <span class="naa_header__nav-item item ">{{ user.name }}</span>
                     <a class="naa_header__nav-item item" data-request="onLogout" data-request-data="redirect: '/'">Sign out</a>
                 {% else %}
                     <a class="naa_header__nav-item item {% if this.page.id == 'login' %} active {% endif %}" href="{{ 'login' | page }}"
