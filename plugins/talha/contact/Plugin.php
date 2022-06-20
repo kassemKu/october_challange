@@ -7,7 +7,7 @@ class Plugin extends PluginBase
     public function registerComponents()
     {
         return [
-            'Talha\Contact\Components\ContactForm' => 'contactform'
+            \Talha\Contact\Components\ContactForm::class => 'contactform'
         ];
     }
 

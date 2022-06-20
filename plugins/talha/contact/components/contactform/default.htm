@@ -1,0 +1,25 @@
+{{ form_ajax('onSend') }}
+<div class="ui form">
+    <div class="fields">
+        <div class="field">
+            <label>your full name</label>
+            <input type="text" placeholder="Full Name" name="member_name">
+        </div>
+        <div class="field">
+            <label>your phone number</label>
+            <input type="text" placeholder="phone number" name="phone_number">
+        </div>
+        {% if not str_contains(user.email, 'naas') %}
+            <div class="disabled field">
+                <label>registered at</label>
+                <input type="text" name="registered_at" value="{{ user.created_at.format('d/m/Y') }}">
+            </div>
+        {% endif %}
+    </div>
+    <div class="field">
+        <label>message</label>
+        <textarea placeholder="Message" name="content"></textarea>
+    </div>
+    <button type="submit" class="ui blue button">send message</button>
+</div>
+{{ form_close() }}

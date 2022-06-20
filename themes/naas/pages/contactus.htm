@@ -1,12 +1,19 @@
-title = "Contactus"
+title = "Contact us"
 url = "/contactus"
 layout = "default"
 is_hidden = 0
 
-[contactform contactform2]
+[contactform]
 ==
 {% if user %}
-    {% component 'contactform2' %}
+    <h2 style="text-transform: uppercase;">contact us</h2>
+    {% component 'contactform' %}
 {% else %}
-    <h4 style="color: red; text-transform: capitalize">sorry you shoud loggedin to submit contact form <a href="{{ 'login' | page }}">login</a></h4>
+<div class="ui warning message">
+    <div class="header">
+      You must register before you can do that!
+    </div>
+    Visit our registration page, then try again
+  </div>
+    <h4 class="ui blue" style="text-transform: capitalize">you can register/login here <a href="{{ 'login' | page }}"><b>login</b></a></h4>
 {% endif %}

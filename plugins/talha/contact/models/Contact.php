@@ -11,6 +11,13 @@ class Contact extends Model
 
     use \October\Rain\Database\Traits\SoftDelete;
 
+    protected $fillable = [
+        'member_name',
+        'phone_number',
+        'content',
+        'en_description'
+    ];
+
     protected $dates = ['deleted_at'];
 
 
