@@ -1,0 +1,14 @@
+columns:
+    member_name:
+        label: 'Member name'
+        type: text
+        searchable: true
+        sortable: true
+    phone_number:
+        label: 'Phone Number'
+        type: number
+        searchable: true
+    content:
+        label: Content
+        type: text
+        searchable: true

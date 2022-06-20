@@ -1,0 +1,5 @@
+title: 'talha.contact::lang.plugin.name'
+modelClass: Talha\Contact\Models\Contact
+nameFrom: id
+toolbar:
+    buttons: reorder_toolbar

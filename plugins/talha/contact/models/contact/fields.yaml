@@ -1,0 +1,14 @@
+fields:
+    member_name:
+        label: 'Memeber Name'
+        span: left
+        type: text
+    phone_number:
+        label: Phone
+        span: right
+        type: number
+    content:
+        label: Content
+        span: full
+        size: ''
+        type: richeditor

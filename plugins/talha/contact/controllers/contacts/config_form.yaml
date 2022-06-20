@@ -1,0 +1,11 @@
+name: Contacts
+modelClass: Talha\Contact\Models\Contact
+form: $/talha/contact/models/contact/fields.yaml
+defaultRedirect: talha/contact/contacts
+create:
+    redirect: 'talha/contact/contacts/update/:id'
+    redirectClose: talha/contact/contacts
+update:
+    redirect: talha/contact/contacts
+    redirectClose: talha/contact/contacts
+preview: {  }

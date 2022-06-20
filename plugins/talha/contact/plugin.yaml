@@ -1,0 +1,11 @@
+plugin:
+    name: 'talha.contact::lang.plugin.name'
+    description: 'talha.contact::lang.plugin.description'
+    author: talha
+    icon: oc-icon-coffee
+    homepage: ''
+navigation:
+    contact:
+        label: Contact
+        url: talha/contact/contacts
+        icon: icon-coffee
