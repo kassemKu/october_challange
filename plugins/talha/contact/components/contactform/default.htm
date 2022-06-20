@@ -11,7 +11,7 @@
         </div>
         {% if not str_contains(user.email, 'naas') %}
             <div class="disabled field">
-                <label>registered at</label>
+                <label>registered your account in NAAS at</label>
                 <input type="text" name="registered_at" value="{{ user.created_at.format('d/m/Y') }}">
             </div>
         {% endif %}

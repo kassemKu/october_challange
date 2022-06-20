@@ -38,6 +38,7 @@ class ContactForm extends ComponentBase
 
         if($validator->fails()) {
             throw new ValidationException($validator);
+            return Redirect::back()->withErrors($validator);
         } else {
             Contact::create([
                 'member_name' => Input::get('member_name'),
