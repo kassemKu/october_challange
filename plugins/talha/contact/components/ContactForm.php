@@ -6,6 +6,7 @@ use Cms\Classes\ComponentBase;
 use Validator;
 use ValidationException;
 use Input;
+use Flash;
 use Redirect;
 use Talha\Contact\Models\Contact;
 
@@ -45,8 +46,8 @@ class ContactForm extends ComponentBase
                 'phone_number' => Input::get('phone_number'),
                 'content' => Input::get('content')
             ]);
-
-            return Redirect::to('/');
+            Flash::success('message sended successfully');
+            return Redirect::back();
         }
     }
 }

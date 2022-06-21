@@ -23,3 +23,7 @@
     <button type="submit" class="ui blue button">send message</button>
 </div>
 {{ form_close() }}
+
+{% flash success %}
+    <p>{{ message }}</p>
+{% endflash %}
